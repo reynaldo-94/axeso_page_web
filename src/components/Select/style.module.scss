@@ -1,0 +1,23 @@
+@import "../../styles/constants.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  label {
+    color: $darkBlueColor;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  select {
+    border-radius: 6px;
+    border: 1px solid $darkGreyColor_2;
+    height: 38px;
+    opacity: 0.6;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 5px;
+  }
+}

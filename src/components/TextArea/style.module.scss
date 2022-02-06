@@ -1,0 +1,12 @@
+@import "../../styles/constants.scss";
+
+textarea {
+    height: 80px;
+    resize: none;
+    border-radius: 6px;
+    border: 1px solid $darkGreyColor_2;
+    opacity: 0.6;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 6px;
+}

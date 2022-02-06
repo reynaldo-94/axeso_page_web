@@ -1,0 +1,117 @@
+@import "../constants.scss";
+
+.contactUs {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 48px 30px;
+  gap: 20px;
+
+  &Begin {
+    border-bottom: 1px solid $darkGreyColor_3;
+  }
+
+  &Begin,
+  &Mind {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: 50px;
+  }
+
+  &Footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.frontPage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  column-gap: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+
+  label {
+    color: $darkBlueColor;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  input {
+    border-radius: 6px;
+    border: 1px solid $darkGreyColor_2;
+    // width: 334px;
+    height: 38px;
+    opacity: 0.6;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  select {
+    border-radius: 6px;
+    border: 1px solid $darkGreyColor_2;
+    height: 38px;
+    opacity: 0.6;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 5px;
+  }
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+  border-radius: 6px;
+  border: 1px solid $darkGreyColor_2;
+  opacity: 0.6;
+  box-sizing: border-box;
+  font-size: 18px;
+  padding: 6px;
+}
+
+.required {
+  color: $redColor;
+  font-size: 18px;
+}
+
+.messageResponse {
+  text-align: right;
+}
+
+@media only screen and (max-width: 992px) {
+  .contactImage {
+    display: none;
+  }
+
+  .contactUs {
+    &Begin {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 10px;
+    }
+
+    &Mind {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

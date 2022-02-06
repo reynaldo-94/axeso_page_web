@@ -1,0 +1,105 @@
+@import "../constants.scss";
+
+.us,
+.values,
+.team {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0px 48px 20px;
+}
+
+.us {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  &Information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 100px;
+  }
+}
+
+.values,
+.team {
+  padding-top: 20px;
+}
+
+.values {
+  background-color: $darkBlueColor;
+  color: $whiteColor;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  // gap: 80px;
+
+  &Card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 150px;
+  }
+
+  &Information {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  &Image {
+    text-align: center;
+  }
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &Members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+  }
+}
+
+.member {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &Name {
+    color: $blackColor;
+    font-weight: 600;
+  }
+
+  &Position {
+    color: $redColor;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .values {
+    gap: 20px;
+
+    &Card {
+      align-items: baseline;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+  }
+
+  .teamMembers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

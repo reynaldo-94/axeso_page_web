@@ -1,0 +1,1 @@
+export const lineHeightParagraph = 24.95

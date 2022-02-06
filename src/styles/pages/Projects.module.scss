@@ -1,0 +1,46 @@
+@import "../constants.scss";
+
+.projects {
+  padding: 0px 48px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  &Card {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 250px repeat(2, auto);
+    // gap: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $darkGreyColor;
+    cursor: pointer;
+  }
+}
+
+.cardImage {
+  background-color: $lightGreyColor;
+  border-radius: 10px;
+  width: max-content;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cardIcon {
+  text-align: right;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  .projectsCard {
+    display: grid;
+    grid-template-columns: 200px repeat(2, auto);
+    padding-bottom: 12px;
+    gap: 10px;
+  }
+}

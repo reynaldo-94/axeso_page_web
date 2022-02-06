@@ -1,0 +1,141 @@
+@import '../../styles/constants.scss';
+
+.welcomePage,
+.ourServices,
+.wishList {
+  padding: 0px 48px 50px;
+}
+
+.welcomePage {
+  box-sizing: border-box;
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    flex: 1;
+  }
+
+  &Information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.ourServices,
+.wishList {
+  box-sizing: border-box;
+  display: grid;
+  gap: 17px;
+  grid-template-rows: repeat(3, auto);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.ourServicesBody,
+.wishListBody {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ourServicesCard,
+.wishListCard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  &Body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.ourServices {
+  background-color: $darkBlueColor;
+  color: $whiteColor;
+
+  // &Card {
+  //   &Body {
+  //     display: flex;
+  //     flex-direction: column;
+  //     gap: 5px;
+  //   }
+  // }
+}
+
+.wishList {
+  &Header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.arrowDownIcon {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) {
+  .imgFrontPage img {
+    width: 530px;
+    height: 480px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .welcomePage,
+  .ourServices,
+  .wishList {
+    padding: 0px 30px 4px;
+  }
+
+  .ourServices,
+  .wishList {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .welcomePage {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &Content {
+      gap: 10px;
+      flex: none;
+    }
+  }
+
+  .welcomePage img {
+    width: auto;
+    height: 200px;
+  }
+
+  .welcomePageContent {
+    gap: 10px;
+  }
+
+  .ourServices,
+  .wishList {
+    display: flex;
+    flex-direction: column;
+
+    &Body {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  .imgFrontPage {
+    text-align: center;
+  }
+}

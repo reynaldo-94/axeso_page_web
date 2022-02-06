@@ -1,0 +1,80 @@
+@import "../../styles/constants.scss";
+
+.card1,
+.card2,
+.card3 {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.card1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-right: 50px;
+
+  &Image {
+    background-color: $lightGrey2Color;
+  }
+
+  &Body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 30px;
+  }
+}
+
+.card2 {
+  background-color: $darkBlueColor;
+  color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px 48px 25px 50px;
+
+  &Body {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  &Features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &Team,
+    &Duration,
+    &Deliverables {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &Process {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .labelRed {
+    color: $redColor;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .card1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-right: 0px;
+
+    &Image {
+      text-align: center;
+    }
+
+    &Body {
+      padding-right: 30px;
+    }
+  }
+}

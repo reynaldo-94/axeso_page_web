@@ -1,0 +1,230 @@
+@import "../../styles/constants.scss";
+
+@keyframes closeNavOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes openNavIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.nav,
+.main,
+.footer {
+  font-family: $fontPrimary, sans-serif;
+  color: $darkBlueColor;
+}
+
+.nav {
+  align-items: center;
+  background-color: $whiteColor;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  padding-left: 36px;
+  padding-right: 62px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  position: sticky;
+  top: 0;
+
+  &Logo {
+    align-items: center;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: $darkBlueColor;
+    }
+
+    a:hover {
+      border-bottom: 2px solid $lightGreenColor;
+      font-weight: bold;
+    }
+
+    .closeNav {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .iconMenu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .nav > ul {
+    // display: none;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    box-sizing: border-box;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    position: fixed;
+    background-color: $darkBlueColor;
+    visibility: visible;
+    opacity: 1;
+    animation: openNavIn 150ms ease-in-out;
+
+    &.closed {
+      animation: closeNavOut 150ms ease-in-out;
+      transform: translateY(-100%);
+    }
+
+    a {
+      color: $whiteColor !important;
+      font-size: 32px;
+      font-weight: 700;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    // .optionsPadding {
+    //   position: relative;
+    //   top: -150px;
+    // }
+
+    li {
+      &.closeNav {
+        top: 30px;
+        right: 30px;
+        position: absolute;
+        display: block;
+      }
+    }
+  }
+
+  .nav {
+    padding-top: 14px;
+    padding-bottom: 9px;
+    padding-left: 20px;
+    padding-right: 30px;
+
+    &Logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    img {
+      width: 40px;
+      height: 35px;
+    }
+  }
+
+  .iconMenu {
+    text-align: right;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {...}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {...}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}
+
+.footer {
+  background-color: $darkBlueColor;
+  color: $whiteColor;
+  display: flex;
+  gap: 180px;
+  padding: 10px 48px 25px;
+
+  &Content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &Information {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  &SocialMedia {
+    display: flex;
+    gap: 10px;
+    padding-top: 48px;
+  }
+}
+
+.footerSocialMedia > div {
+  cursor: pointer;
+}
+.informationContact {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 25px;
+}
+
+.informationNumbers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.email {
+  color: $redColor;
+}
+
+.main {
+  padding-top: 50px;
+}
+
+// MOBILE
