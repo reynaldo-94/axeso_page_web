@@ -49,7 +49,7 @@ export default function Us() {
       <div
         className={styles.values}
         style={{
-          height: "100vh",
+          minHeight: "100vh",
           boxSizing: "border-box",
         }}
       >
@@ -71,8 +71,17 @@ export default function Us() {
             <Image name="productive" width={250} height={150} />
           </div>
         </div>
+        <div className={styles.valuesCard}>
+          <div className={styles.valuesInformation}>
+            <Title text="Seamos Concientes" color={whiteColor} />
+            <Paragraph content="Nos preocupamos por impactar positivamente en el mundo, nuestro trabajo buscará siempre agregar valor en las personas." />
+          </div>
+          <div className={styles.valuesImage}>
+            <Image name="aware" width={250} height={200} />
+          </div>
+        </div>
       </div>
-      <div
+      {/* <div
         className={styles.values}
         style={{
           height: "100vh",
@@ -88,7 +97,7 @@ export default function Us() {
             <Image name="aware" width={250} height={200} />
           </div>
         </div>
-      </div>
+      </div> */}
       <div className={styles.team}>
         <Title
           text="Conoce al equipo"

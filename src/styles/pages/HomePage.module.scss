@@ -43,7 +43,7 @@
 .wishListBody {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 50px;
 }
 
 .ourServicesCard,
@@ -54,7 +54,7 @@
   &Body {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
   }
 }
 

@@ -4,8 +4,7 @@ import Paragraph from "../Paragraph";
 import Title from "../Title";
 import styles from "./style.module.scss";
 export default function ProjectCard({ data }) {
-
-  const { card_1, card_2, card_3  } = data
+  const { card_1, card_2, card_3 } = data;
 
   return (
     <>
@@ -19,19 +18,17 @@ export default function ProjectCard({ data }) {
         </div>
       </div>
       <div className={styles.card2}>
-        <Title text={card_2.title} size={33} color={whiteColor} />
+        <div style={{ padding: '0px 20px' }}>
+          <Title text={card_2.title} size={33} color={whiteColor} />
+        </div>
         <div className={styles.card2Body}>
           <Paragraph content={card_2.content} />
           <div className={styles.card2Features}>
             <div className={styles.card2FeaturesTeam}>
               <div className={styles.labelRed}>Equipo</div>
-              {
-                card_2.team.map( (el, index) => {
-                  return (
-                    <div key={index}>{el}</div>
-                  )
-                })
-              }
+              {card_2.team.map((el, index) => {
+                return <div key={index}>{el}</div>;
+              })}
             </div>
             <div className={styles.card2FeaturesDuration}>
               <div className={styles.labelRed}>Duración</div>
@@ -39,13 +36,9 @@ export default function ProjectCard({ data }) {
             </div>
             <div className={styles.card2FeaturesDeliverables}>
               <div className={styles.labelRed}>Entregables</div>
-              {
-                card_2.deliverables.map((el, index) => {
-                  return (
-                    <div key={index}>{el}</div>
-                  )
-                })
-              }
+              {card_2.deliverables.map((el, index) => {
+                return <div key={index}>{el}</div>;
+              })}
             </div>
           </div>
           <div className={styles.card2Process}>
@@ -54,12 +47,12 @@ export default function ProjectCard({ data }) {
           </div>
         </div>
       </div>
-      <div 
+      <div
         className={styles.card3}
         style={{
-          width: '100%',
+          width: "100%",
           background: `url(/images/${card_3.image}.svg) no-repeat center`,
-          // backgroundSize: 'cover' 
+          // backgroundSize: 'cover'
         }}
       >
         {/* <Image name={card_3.image} width={1440} /> */}
