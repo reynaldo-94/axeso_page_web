@@ -77,7 +77,7 @@ export default function ContactUs() {
       <div className={styles.contactUsBegin}>
         <div className={styles.frontPage}>
           <Title text="Empecemos ..." size={28} />
-          <Paragraph content="Cuéntanos quien eres y que estas haciendo" />
+          <Paragraph content="Cuéntanos quién eres y que estás haciendo" />
           <div className={styles.contactImage}>
             <Image name="let_us_begin" width={260} height={200} />
           </div>
