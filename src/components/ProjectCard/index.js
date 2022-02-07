@@ -58,8 +58,8 @@ export default function ProjectCard({ data }) {
         className={styles.card3}
         style={{
           width: '100%',
-          height: '100vh',
-          backgroundImage: `url(/images/${card_3.image}.svg)`,
+          background: `url(/images/${card_3.image}.svg) no-repeat center`,
+          // backgroundSize: 'cover' 
         }}
       >
         {/* <Image name={card_3.image} width={1440} /> */}

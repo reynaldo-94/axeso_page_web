@@ -1,4 +1,4 @@
-@import '../../styles/constants.scss';
+@import "../../styles/constants.scss";
 
 .welcomePage,
 .ourServices,
@@ -8,12 +8,12 @@
 
 .welcomePage {
   box-sizing: border-box;
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  min-height: 100vh;
 
   &Content {
     display: flex;
@@ -83,6 +83,10 @@
   cursor: pointer;
 }
 
+.imgFrontPage {
+  text-align: center;
+}
+
 @media only screen and (min-width: 1200px) {
   .imgFrontPage img {
     width: 530px;
@@ -133,9 +137,5 @@
       flex-direction: column;
       gap: 30px;
     }
-  }
-
-  .imgFrontPage {
-    text-align: center;
   }
 }
