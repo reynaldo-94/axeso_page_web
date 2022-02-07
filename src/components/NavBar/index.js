@@ -78,7 +78,7 @@ export default function NavBar(props) {
                 </li>
                 <li className={styles.optionsPadding}>
                   <NavLink exact to="/contactanos" activeClassName="active">
-                    Contactános
+                    Contáctanos
                   </NavLink>
                 </li>
               </ul>
