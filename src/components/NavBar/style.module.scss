@@ -116,9 +116,7 @@
     a {
       color: $whiteColor !important;
       font-size: 32px;
-      font-weight: 700;
-      padding-left: 20px;
-      padding-right: 20px;
+      font-weight: 700;      
     }
 
     // .optionsPadding {
@@ -127,6 +125,8 @@
     // }
 
     li {
+      padding-left: 20px;
+      padding-right: 20px;
       &.closeNav {
         top: 30px;
         right: 30px;

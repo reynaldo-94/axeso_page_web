@@ -3,7 +3,7 @@
 .contactUs {
   display: flex;
   flex-direction: column;
-  padding: 0px 48px 30px;
+  padding: 100px 48px 30px;
   gap: 20px;
 
   &Begin {
@@ -96,22 +96,42 @@ textarea {
   }
 
   .contactUs {
+    gap: 35px;
     &Begin {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 32px;
       padding-bottom: 10px;
     }
 
     &Mind {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 20px;
     }
   }
 
   .form {
     display: flex;
     flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .container {
+    gap: 15px;
+  }
+
+  .frontPage {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  .contactUsFooter {
+    button {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
   }
 }

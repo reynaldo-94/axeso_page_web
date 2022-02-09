@@ -10,7 +10,7 @@ export default function ProjectCard({ data }) {
     <>
       <div className={styles.card1}>
         <div className={styles.card1Image}>
-          <Image name={card_1.image} width={500} height={450} />
+          <Image name={card_1.image} width={500} height={450} extension='png' />
         </div>
         <div className={styles.card1Body}>
           <Title text={card_1.title} size={33} />
@@ -51,8 +51,8 @@ export default function ProjectCard({ data }) {
         className={styles.card3}
         style={{
           width: "100%",
-          background: `url(/images/${card_3.image}.svg) no-repeat center`,
-          // backgroundSize: 'cover'
+          background: `url(/images/${card_3.image}.jpg) no-repeat center`,
+          backgroundSize: 'cover'
         }}
       >
         {/* <Image name={card_3.image} width={1440} /> */}

@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { FaArrowDown } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Arrow from "../components/Arrow";
 import Button from "../components/Button";
@@ -14,7 +13,6 @@ import {
   fontSizeParagraphDesktop,
   fontSizeParagraphMobile,
   fontSizeTitleDesktopMedium,
-  fontSizeTitleDesktopBig,
   fontSizeTitleMobilie,
 } from "../constants/fontSize";
 import { ourServicesData, wishListData } from "../constants/pages/HomePage";
@@ -47,56 +45,7 @@ export default function HomePage() {
         title_line_2={title_line_2}
         content={content}
         image={image}
-      />
-      {/* <div className={styles.welcomePage}>
-        <div className={styles.welcomePageContent}>
-          <div className={styles.welcomePageInformation}>
-            <Title
-              text=""
-              size={isMobile ? fontSizeTitleMobilie : fontSizeTitleDesktopBig}
-            >
-              Tu tienes la visión, <br />
-              nosotros la tecnología
-            </Title>
-            <Paragraph
-              content={
-                "Encontramos la mejor manera de dar forma a soluciones digitales  cocreando  experiencias integrales y orientadas a un propósito."
-              }
-              size={
-                isMobile ? fontSizeParagraphMobile : fontSizeParagraphDesktop
-              }
-            />
-          </div>
-          {!isMobile && (
-            <div
-              onClick={(event) => {
-                window.location = "#services";
-                event.stopImmediatePropagation();
-              }}
-              className={styles.arrowDownIcon}
-            >
-              <FaArrowDown size={30} className={"arrow-down-border"} />
-            </div>
-          )}
-        </div>
-        <div className={styles.imgFrontPage}>
-          <Image
-            name={isMobile ? "front_page_mobile" : "front_page_desktop"}
-            extension="jpg"
-          />
-        </div>
-        {isMobile && (
-          <div
-            onClick={(event) => {
-              window.location = "#services";
-              event.stopImmediatePropagation();
-            }}
-            className={styles.arrowDownIcon}
-          >
-            <FaArrowDown size={30} className={"arrow-down-border"} />
-          </div>
-        )}
-      </div> */}
+      />      
       <div id="services" className={styles.ourServices}>
         <Title
           text="Nuestros Servicios"
@@ -112,7 +61,14 @@ export default function HomePage() {
                     <Image name={el.image} width={80} height={94} />
                   </div>
                   <Title text={el.title} size={24} color={whiteColor} />
-                  <Paragraph content={el.text} />
+                  <Paragraph
+                    content={el.text}
+                    size={
+                      isMobile
+                        ? fontSizeParagraphMobile
+                        : fontSizeParagraphDesktop
+                    }
+                  />
                 </div>
                 <Arrow
                   label="Más Info"
@@ -164,11 +120,7 @@ export default function HomePage() {
                   </div>
                   <Title
                     text={el.title}
-                    size={
-                      isMobile
-                        ? fontSizeTitleMobilie
-                        : fontSizeTitleDesktopMedium
-                    }
+                    size={24}
                   />
                   <Paragraph
                     content={el.text}

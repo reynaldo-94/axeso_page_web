@@ -33,7 +33,7 @@
 .wishList {
   box-sizing: border-box;
   display: grid;
-  gap: 17px;
+  gap: 35px;
   grid-template-rows: repeat(3, auto);
   padding-top: 25px;
   padding-bottom: 25px;
@@ -75,7 +75,7 @@
   &Header {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
   }
 }
 
@@ -104,7 +104,6 @@
   }
 
   .welcomePage {
-    
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -128,16 +127,21 @@
   .wishList {
     display: flex;
     flex-direction: column;
+    gap: 40px;
 
     &Body {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 45px;
+    }
+
+    &Card,
+    &CardBody {
+      gap: 20px;
     }
   }
 
   .imgFrontPage {
     text-align: center;
   }
-
 }

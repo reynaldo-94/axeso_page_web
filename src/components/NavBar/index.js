@@ -1,14 +1,6 @@
 import * as React from "react";
-import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import {
-  Box,
-  Container,
-  CssBaseline,
-  Toolbar,
-  Typography,
-} from "@mui/material";
 import styles from "./style.module.scss";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/system/logo.svg";
@@ -41,11 +33,6 @@ export default function NavBar(props) {
       <ElevationScroll {...props}>
         <AppBar>
           {
-            /* <Toolbar>
-            <Typography variant="h6" component="div">
-              Scroll to Elevate App Bar
-            </Typography>
-          </Toolbar> */
             <nav className={styles.nav}>
               <div className={styles.navLogo}>
                 <NavLink exact to="/" style={{ borderBottom: "none" }}>

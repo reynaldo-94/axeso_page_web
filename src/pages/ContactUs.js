@@ -1,15 +1,11 @@
 import emailjs from "@emailjs/browser";
 import Button from "../components/Button";
 import Image from "../components/Image";
-import Input from "../components/Input";
 import Paragraph from "../components/Paragraph";
-import Select from "../components/Select";
-import TextArea from "../components/TextArea";
 import Title from "../components/Title";
 import styles from "../styles/pages/ContactUs.module.scss";
 import { useForm } from "react-hook-form";
-import { useContext, useState } from "react";
-import PageContext from "../contexts/PageContext";
+import { useState } from "react";
 
 const optionsSelect = [
   {
@@ -82,14 +78,6 @@ export default function ContactUs() {
             <Image name="let_us_begin" width={260} height={200} />
           </div>
         </div>
-        {/* <div className={styles.form}>
-          <Input label="Nombre *" register='name' />
-          <Input label="Email *" />
-          <Input label="Compañía" />
-          <Input label="Rol" />
-          <Input label="Teléfono" type="email" />
-          <Select label="Necesito *" options={optionsSelect} />
-        </div> */}
         <div className={styles.form}>
           <div className={styles.container}>
             <label>
@@ -170,6 +158,8 @@ export default function ContactUs() {
           borderRadius={8}
           type="submit"
           disabled={isLoading ? true : false}
+          width='100'
+          justifyContent="center"
         />
       </div>
       {isSendEmail && (
