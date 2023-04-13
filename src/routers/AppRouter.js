@@ -6,7 +6,7 @@ import HomePage from "../pages/HomePage";
 import Projects from "../pages/Projects";
 import Design from "../pages/services/Design";
 import Development from "../pages/services/Development";
-import Strategy from "../pages/services/Strategy";
+import BusinessIntelligence from "../pages/services/BusinessIntelligence";
 import Us from "../pages/Us";
 import AxesoApp from "../pages/projects/AxesoApp";
 import AxesoFarma from "../pages/projects/AxesoFarma";
@@ -31,7 +31,7 @@ export default function AppRouter() {
             <Route exact path="/contactanos" element={<ContactUs />} />
             <Route exact path="/disenio" element={<Design />} />
             <Route exact path="/desarrollo" element={<Development />} />
-            <Route exact path="/estrategia" element={<Strategy />} />
+            <Route exact path="/business-intelligence" element={<BusinessIntelligence />} />
             {/* PROJECTS */}
             <Route exact path="/proyectos/axeso-app" element={<AxesoApp />} />
             <Route

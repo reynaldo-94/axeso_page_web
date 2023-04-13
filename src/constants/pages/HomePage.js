@@ -13,9 +13,9 @@ export const ourServicesData = [
   },
   {
     image: "strategy",
-    title: "Estrategia",
-    text: "Realizamos procesos de descubrimiento para entender las necesidades de tu negocio y clientes. Te ayudamos a hacer un Brief, priorizar funcionalidades y diseñar un MVP para aumentar tu ROI",
-    moreInfoPath: "estrategia",
+    title: "Business Intelligence",
+    text: "Automatizamos tus reportes en power bi, optimizando el proceso de toma de decisiones. Impleméntanos una estructura escalable para tu compañía.",
+    moreInfoPath: "business-intelligence",
   },
 ];
 
